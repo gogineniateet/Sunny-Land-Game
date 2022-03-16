@@ -9,20 +9,17 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movement;
     Animator animator;
-    bool isgrounded = true;
+    public bool isgrounded = true;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-    // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxis("Horizontal");
